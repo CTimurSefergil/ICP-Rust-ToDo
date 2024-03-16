@@ -1,0 +1,11 @@
+type ToDo = record {
+    description : text;
+    completed : bool;
+};
+
+service : {
+    "add_todo" : (description : text) -> (text);
+    "get_todos" : () -> (text) query;
+    "delete_todo" : (id : nat64) -> ();
+    "complete_todo" : (id : nat64) -> ();
+};
